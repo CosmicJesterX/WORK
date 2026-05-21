@@ -1,0 +1,46 @@
+# Code Conventions: Theatrical Honeypot
+
+## Bash Guidelines
+- Use bash 4.0+ features (arrays, associative arrays)
+- shellcheck compliance (no SC2086 unless necessary)
+- Function-based architecture (trap_mechanics_level_1, etc.)
+- Comments for trap logic (why, not what)
+- Exit codes: 0 = success, 1 = error, 130 = Ctrl+C
+
+## Trap Design
+- Each trap: Setup → Escape Routes (3+) → Learning Payload → Session Data
+- Multiple escape routes (even if hard)
+- No dead-ends (can always Ctrl+C)
+- Learning > punishment
+- Silliness scales with level (6/10 → 12/10)
+
+## Lore Integration
+- Trap characters = NPCs with backstories
+- Fictional universe consistency
+- Anonymized documentation
+- Progressive narrative revelation
+
+## Safety Gates
+- No external calls (no webhooks, no emails)
+- No PII collection (UUIDs only)
+- No forced timeouts (graceful 15 min default)
+- No manipulation or hostility
+- Session archiving only (no deletion/modification)
+
+## Session Tracking
+- UUID format: 8-4-4-4-12 hex
+- JSON storage: .honeypot_sessions/UUID.json
+- Contents: expertise, duration, traps, escapes, achievements
+- Anonymized: No real names, IPs, PIDs
+
+## Naming Conventions
+- Functions: trap_mechanics_level_X_mechanic_name
+- Variables: HONEYPOT_PROJECT_CONSTANT
+- Files: level_1_traps.sh, tournament.json
+- UUIDs: b1d4f269-9fc2-407b-a23b-8429218aff10
+
+## Comments
+- Why trap X teaches Y concept
+- How persona detection routes users
+- Why escape route Z is available
+- Lore integration notes

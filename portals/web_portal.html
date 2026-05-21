@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[CUSTOMIZE] Honeypot Portal</title>
+    <style>
+        body { font-family: monospace; background: #1a1a1a; color: #00ff00; }
+        .portal { max-width: 800px; margin: 50px auto; }
+    </style>
+</head>
+<body>
+    <div class="portal">
+        <h1>[CUSTOMIZE] Welcome to the Honeypot</h1>
+        <p>Persona detected: <span id="persona">LOADING...</span></p>
+        <button onclick="enterPyramid()">Enter</button>
+    </div>
+    <script>
+        // [CUSTOMIZE] Persona detection logic
+        function detectPersona() {
+            return "UNKNOWN"; // Replace with your heuristics
+        }
+        
+        function enterPyramid() {
+            // [CUSTOMIZE] Route to trap system
+            alert("Entering honeypot system...");
+        }
+        
+        document.getElementById("persona").textContent = detectPersona();
+    </script>
+</body>
+</html>
